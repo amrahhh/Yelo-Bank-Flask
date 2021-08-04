@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .form1 {
+            width: 30vh;
+            margin: 14em auto;
+            height: 25vh;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            box-shadow: 0px 0px 61px 40px rgba(34, 60, 80, 0.34);
+            transition: transform .8s;
+        }
+
+        #title {
+            display: block;
+            width: 20vh;
+            margin: 40px auto;
+            border: none;
+            border-radius: 8px;
+            outline-style: none;
+            text-align: center;
+            background-color: rgba(34, 60, 80, 0.62);
+            color: white;
+        }
+
+        .form1:hover {
+            transform: scale(1.2);
+
+        }
+
+        .txt {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+
+        .button {
+            text-align: center;
+        }
+
+        .button button {
+            margin-top: 5vh;
+            border: none;
+            border-radius: 10px;
+            width: 20vh;
+            height: 6vh;
+            background-color: #ffc628;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST">
+        {{ form.csrf_token }}
+        <div class="form1">
+            {{ form.title.label(class='txt') }}
+            {{ form.title }}
+            <div class="button">
+                <button type="submit">Əlavə et</button>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>

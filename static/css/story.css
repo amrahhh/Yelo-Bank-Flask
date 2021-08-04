@@ -1,0 +1,140 @@
+.block_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.stories .block_title, .services_block .block_title {
+    max-width: 1100px;
+    margin: 0 auto 5px;
+    padding: 0 20px;
+}
+
+.block {
+    margin: 0 0 50px 0;
+}
+
+.block:last-child {
+    margin: 0px;
+}
+
+.inner_page .stories {
+    margin: 50px 0 0 0;
+}
+
+.block_heading b {
+    font-family: 'b';
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.counter {
+    width: 32px;
+    height: 32px;
+    background: #FFC628;
+    color: white;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'b';
+    font-size: 18px;
+    line-height: 34px;
+    margin: 0 0 0 8px;
+}
+
+.story_desc {
+    display: inline-block;
+    padding: 15px 27px;
+    height: 15px;
+}
+
+.story_desc b {
+    display: flex;
+    width: 60%;
+    font-family: 'm';
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.story_image {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -72px;
+}
+
+.tag {
+    background: white;
+    font-size: 13px;
+    font-family: 'b';
+    height: 24px;
+    line-height: 22px;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 3px 12px;
+    box-sizing: border-box;
+    margin: 0 0 5px 0;
+}
+
+.slick_items {
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.slick_items img {
+    width: 40%;
+}
+
+.slick_items img {
+    display: inline-flex;
+    float: right;
+    border-radius: 23px;
+}
+
+
+@media screen and (max-width:1000) {
+    .block_title {
+        margin: 0 0 5px 0;
+    }
+
+    .stories .block_title, .services_block .block_title {
+        padding: 0 15px;
+    }
+
+    .block {
+        margin: 0 0 30px 0;
+    }
+
+    .inner_page .stories {
+        margin: 40px 0 0 0;
+    }
+
+    .block_heading b {
+        font-size: 20px;
+        line-height: normal;
+        padding: 7px 0;
+    }
+
+    .counter {
+        display: none;
+    }
+
+    .story_image {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -65px;
+    }
+
+    .slick{
+        width: 95%;
+        margin: 0 auto;
+        height: 140px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+    }
+}

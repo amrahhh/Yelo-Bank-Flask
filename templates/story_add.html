@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Add | Yelo Bank</title>
+</head>
+<style>
+    * {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+        line-height: 47px;
+    }
+
+    .form1 {
+        width: 40%;
+        margin: 14em auto;
+        height: 50vh;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        box-shadow: 0px 0px 72px -2px rgba(34, 60, 80, 0.62);
+        transition: transform .8s;
+    }
+
+    .form1:hover {
+        transform: scale(1.2);
+
+    }
+
+    .first_div {
+        outline-style: none;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .second_div {
+        text-align: center;
+    }
+
+    .third_div {
+        text-align: center;
+    }
+
+    .four_div {
+        text-align: center;
+    }
+
+    .four_div button {
+        background-color: #ffc628;
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 20px;
+        outline-style: none;
+    }
+
+    #tip {
+        height: 25px;
+        background-color: rgba(34, 60, 80, 0.62);
+        color: white;
+        border: none;
+        outline-style: none;
+        border-radius: 5px;
+    }
+
+    #description {
+        color: white;
+        background-color: rgba(34, 60, 80, 0.62);
+        border: none;
+        outline-style: none;
+        border-radius: 5px;
+    }
+
+    #image {
+        outline-style: none;
+    }
+
+    #color {
+        color: white;
+        height: 25px;
+        border: none;
+        background-color: rgba(34, 60, 80, 0.62);
+        outline-style: none;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <form action="" method="POST" enctype="multipart/form-data" class="form1">
+        {{ form.csrf_token }}
+        <div class="container">
+            <div class="first_div">
+                {{ form.tip.label}}<br>
+                {{ form.tip }}<br>
+            </div>
+            <div class="second_div">
+                {{ form.description.label}}<br>
+                {{ form.description }}<br>
+            </div>
+            <div class="third_div">
+                {{ form.image.label}}<br>
+                {{ form.image }}<br>
+            </div>
+            <div class="four_div">
+                {{ form.color.label}}<br>
+                {{ form.color }}<br>
+                <button type="submit">Submit</button>
+            </div>
+    </form>
+</body>
+
+</html>

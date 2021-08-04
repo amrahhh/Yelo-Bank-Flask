@@ -1,0 +1,299 @@
+{% extends 'base.html' %}
+    {% block title %} Kreditlər | Yelo Bank {% endblock %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/kredit.css') }}">
+    {% endblock %}
+
+{% block content %}
+    <!-- <div class="modals">
+        <div class="modals_wrap">
+            <div class="modal_item" data-modal="feedback_modal">
+                <div class="modal_form">
+                    <div class="modal_scroll">
+                        <form id="feed_form" class="js_form" method="POST" enctype="multipart/form-data">
+                            <div class="modal_nav">
+                                <a href="" class="close_pp"></a>
+                                <input type="hidden" name="feed" value="1">
+                                <script
+                                    type="text/javascript"> var field_error = '<div class="form_error">Doldurulması vacibdir</div>'; </script>
+                            </div>
+                            <div class="modal_form_content">
+                                <b>Bizə yazın</b>
+                                <div class="fs_inner">
+                                    <span>Müraciətin növü</span>
+                                    <div class="form_tripl switch_form">
+                                        <div class="form_item">
+                                            <label><input type="radio" name="type" value="teklif"
+                                                    checked=""><span>Təklif</span></label>
+                                        </div>
+                                        <div class="form_item">
+                                            <label><input type="radio" name="type"
+                                                    value="irad"><span>İrad</span></label>
+                                        </div>
+                                        <div class="form_item">
+                                            <label><input type="radio" name="type"
+                                                    value="diqer"><span>Digər</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fs_inner">
+                                    <span>Yelo Bank müştərisisiniz?</span>
+                                    <div class="form_tripl switch_form">
+                                        <div class="form_item">
+                                            <label><input type="radio" name="bank_use" value="1"
+                                                    checked=""><span>Bəli</span></label>
+                                        </div>
+                                        <div class="form_item">
+                                            <label><input type="radio" name="bank_use"
+                                                    value="0"><span>Xeyr</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fs_inner">
+                                    <span>Cavabın alınma forması</span>
+                                    <div class="form_tripl switch_form">
+                                        <div class="form_item">
+                                            <label><input type="radio" name="call_type" value="phone"
+                                                    checked=""><span>Zəng</span></label>
+                                        </div>
+                                        <div class="form_item">
+                                            <label><input type="radio" name="call_type"
+                                                    value="email"><span>Email</span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fs_inner">
+                                    <div class="form_tripl">
+                                        <div class="form_item">
+                                            <input type="text" placeholder="Ad" name="firstname" class="mask_letter">
+                                        </div>
+                                        <div class="form_item">
+                                            <input type="text" placeholder="Soyad" name="lastname" class="mask_letter">
+                                        </div>
+                                        <div class="form_item">
+                                            <input type="text" name="patronymic" class="mask_letter"
+                                                placeholder="Ata adı">
+                                        </div>
+                                    </div>
+                                    <div class="form_line">
+                                        <div class="form_item">
+                                            <input type="text" name="phone" class="mask_phone"
+                                                placeholder="Telefon nömrəsi">
+                                        </div>
+                                        <div class="form_item">
+                                            <input type="text" name="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="form_tripl">
+                                        <div class="form_item">
+                                            <input type="text" name="fin" placeholder="FİN">
+                                        </div>
+                                        <div class="form_item">
+                                            <div class="form_file">
+                                                <input type="file" name="file">
+                                                <div class="form_file_select">
+                                                    <span class="ff_upload">Fayl əlavə etmək</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form_line">
+                                        <div class="form_item">
+                                            <textarea placeholder="Mətn" name="message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fs_bottom">
+                                    <div class="fs_inner">
+                                        <div class="read">
+                                            <div class="form_item" style="display:flex;">
+                                                <img style="width:150px;"
+                                                    src="" alt="">
+                                                <input name="captcha_code" style="margin-left:10px;"
+                                                    placeholder="Şəkildəki mətni daxil edin" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="submit_preloader" style="display:none;"></div>
+                                        <button type="submit" class="yelo_bttn">Göndər</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="content inner_page main">
+        <div class="main_wrap">
+            <div class="common_page_title">
+                <h1>Kreditlər</h1>
+                <p>Xərclərini təxirə salma, dəstək üçün hər zaman Yelo Bank var.</p>
+            </div>
+            <div class="common_list">
+                <div class="common_item yelo_bg">
+                    <div class="ci_desc ci_loan">
+                        <div class="ci_b">İstehlak krediti</div>
+                        <div class="ci_p">Daha yaxşı həyat üçün</div>
+                        <div class="ci_spec">
+                            <div class="ci_s_item">
+                                <p>Məbləğ</p>
+                                <b>300 - 20 000 AZN</b>
+                            </div>
+                            <div class="ci_s_item">
+                                <p>Müddət</p>
+                                <b>6 - 36 ay</b>
+                            </div>
+                            <div class="ci_s_item">
+                                <p>İllik faiz dərəcəsi</p>
+                                <b>min. 17%</b>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="" class="brand_bttn"><span>Sifariş et</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="bl_arr_bttn"><span>Daha
+                                        ətraflı</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ci_common_image" style="background-image:url(../static/assets/image/consumer-loan-pic.png);">
+                    </div>
+                </div>
+                <div class="common_item yelo_bg">
+                    <div class="ci_desc ci_loan">
+                        <div class="ci_b">Daşınmaz əmlak girovlu kredit</div>
+                        <div class="ci_p"></div>
+                        <div class="ci_spec">
+                            <div class="ci_s_item">
+                                <p>Məbləğ</p>
+                                <b>5 000 - 100 000 AZN</b>
+                            </div>
+                            <div class="ci_s_item">
+                                <p>Müddət</p>
+                                <b>12 - 48 ay</b>
+                            </div>
+                            <div class="ci_s_item">
+                                <p>İllik faiz dərəcəsi</p>
+                                <b>min. 15%</b>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="" class="bl_arr_bttn"><span>Daha
+                                        ətraflı</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ci_common_image" style="background-image:url(../static/assets/image/2000-white_3.png);"></div>
+                </div>
+                <div class="common_item yelo_bg">
+                    <div class="ci_desc ci_loan">
+                        <div class="ci_b">Əmanət girovu ilə kredit</div>
+                        <div class="ci_p">Əminliklə istifadən üçün</div>
+                        <div class="ci_spec">
+                            <div class="ci_s_item">
+                                <p>Müddət</p>
+                                <b>Əmanət müddətinin sonunadək</b>
+                            </div>
+                            <div class="ci_s_item">
+                                <p>İllik faiz dərəcəsi</p>
+                                <b>Əmanətin faiz dərəcəsi + 5%</b>
+                            </div>
+                            <div class="ci_s_item">
+                                <p>Komissiya</p>
+                                <b>0%</b>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="" class="bl_arr_bttn"><span>Daha ətraflı</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ci_common_image"
+                        style="background-image:url(../static/assets/image/emanet-girovu-kredit-pic-fin.png);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% include 'includes/story.html' %}
+    </div>
+    <!-- <footer class="footer">
+        <div class="main_wrap">
+            <div class="foot_top">
+                <ul class="social">
+                    <li><a href="https://www.facebook.com/yelo.az" target="_blank" class="f"
+                            style="background-image:url(../static/assets/image/f.svg)"></a></li>
+                    <li><a href="https://www.instagram.com/yelobank/" target="_blank" class="f"
+                            style="background-image:url(../static/assets/image/i.svg)"></a></li>
+                    <li><a href="https://www.linkedin.com/company/nikoilbank" target="_blank" class="f"
+                            style="background-image:url(../static/assets/image/l.svg)"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCz7siujqcwxQz3OcWqK5NLQ" target="_blank" class="f"
+                            style="background-image:url(../static/assets/image/y.svg)"></a></li>
+                    <li><a href="https://twitter.com/yelo_bank" target="_blank" class="f"
+                            style="background-image:url(../static/assets/image/t.svg)"></a></li>
+                </ul>
+                <div class="app_b_desc show_mobile">
+                    <ul>
+                        <li>
+                            <a href="https://apps.apple.com/az/app/yelo/id1515449668" class="store apple">
+                                <div>
+                                    <span>Yüklə</span>
+                                    <p>App Store</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=az.yelo.app&hl=ru"
+                                class="store google_play">
+                                <div>
+                                    <span>Yüklə</span>
+                                    <p>Google Play</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact_inf">
+                    <div class="ci_item">
+                        <p>Bizi tap</p><b>Puşkin küçəsi 30, Bakı AZ 1010, Azərbaycan</b>
+                    </div>
+                    <div class="ci_item">
+                        <p>Əlaqə nömrəsi</p><b>012 981</b>
+                    </div>
+                    <div class="ci_item">
+                        <p>Bizə yazın</p><b><a href="" target="_blank"><span
+                                    class="__cf_email__">bank@yelo.az</span></a></b>
+                    </div>
+                </div>
+            </div>
+            <div class="foot_bottom">
+                <a class="logo"></a>
+                <ul>
+                    <li>
+                        <p>© 2021 Yelo Bank</p>
+                    </li>
+                    <li><a href="https://www.e-gov.az" target="_blank">E-portal</a></li>
+                    <li><a href="https://www.adif.az/" target="_blank">ADİF</a></li>
+                    <li><a href="https://infobank.az/" target="_blank">infobank.az</a></li>
+                    <li><a href="https://gpp.az/WebPortal/Infosite/Sc/989100/Category/8" target="_blank">AR
+                            Silahlı qüvvələrinə yardım fondu</a></li>
+                    <li><a href="https://gpp.az/WebPortal/Infosite/Sc/989000/Category/8" target="_blank">YAŞAT
+                            Fondu</a></li>
+                </ul>
+                <div class="by_jis">
+                    <p>Site by</p><a href="http://www.jis.az/" target="_blank" class="jis">Jeykhun Imanov Studio</a>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+{% endblock %}
+
+{% block js %}
+<script src="{{url_for('static', filename = 'js/scripts.js')}}"></script>
+{% endblock %}

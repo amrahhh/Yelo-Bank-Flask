@@ -1,0 +1,180 @@
+<header>
+    <div class="header_top">
+        <div class="header_wrap">
+            <div class="left_content">
+                <ul>
+                    <li><a href="#" class="active">Fərdi</a></li>
+                    <li><a href="#">Biznes</a></li>
+                    <li><a href="#">Bank haqqında</a></li>
+                </ul>
+            </div>
+            <div class="right_content">
+                <ul>
+                    <li class="r-location">
+                        <a href="#" class="rc-location"
+                            style="background: url(/static/assets/image/ht_location.svg) no-repeat;">ATM və
+                            Filiallar</a>
+                    </li>
+
+                    <li class="r-randevu">
+                        <a href="#" class="rc-location"
+                            style="background: url(/static/assets/image/randevu.svg) no-repeat;">Onlayn növbə</a>
+                    </li>
+
+                    <li class="r-call">
+                        <a href="#" class="rc-location"
+                            style="background: url(/static/assets/image/ht_call.svg) no-repeat;">(012)981</a>
+                    </li>
+
+                    <li class="r-search">
+                        <a href="#" class="rc-location" id="searchIcon"
+                            style="background: url(/static/assets/image/search_header.svg) no-repeat; opacity: 0.5;"></a>
+                    </li>
+
+                    <li class="r-langselect">
+                        <div class="lang_select">
+                            <a href="#" class="active_lang open_select">AZ</a>
+                            <div class="select_box">
+                                <div class="select_content">
+                                    <ul>
+                                        <li><a href="#" class="active">AZ</a></li>
+                                        <li><a href="#">EN</a></li>
+                                        <li><a href="#">RU</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <div class="head_core">
+            <div class="head_wrap">
+                <div class="logo_side">
+                    <a href="{{ url_for('index')}}" class="logo"></a>
+                </div>
+                <nav>
+                    <ul data-page="{{ page_name }}">
+                        <li><a href="{{ url_for('credits') }}" data-page_name="credits">Kreditlər</a></li>
+                        <li><a href="{{ url_for('card') }}" data-page_name="cards">Kartlar</a></li>
+                        <li><a href="#">Əmanətlər</a></li>
+                        <li><a href="#">Pul köcürülmələri</a></li>
+                    </ul>
+                </nav>
+                <div class="head_right">
+                    <a href="#" class="message_trigger for_mobile"></a>
+                    <a href="#" target="_blank" class="o_banking">
+                        <span>Internet Bank</span>
+                    </a>
+                    <a href="#" class="menu_toggle"></a>
+                </div>
+            </div>
+        </div>
+        <div class="head_adds">
+            <div class="head_wrap sub_menu_wrap">
+                <div class="menu_left">
+                    <div class="menu_adds mob_only">
+                        <ul>
+                            <li class="r-location">
+                                <a href="#" class="rc-location">
+                                    <div class="mobile_icon"
+                                        style="background: url(/static/assets/image/ht_location.svg) no-repeat left;">
+                                        <p>ATM və Filiallar</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="r-randevu">
+                                <a href="#" class="rc-location">
+                                    <div class="mobile_icon"
+                                        style="background: url(/static/assets/image/randevu.svg) no-repeat left;">
+                                        <p>Onlayn Növbə</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exp_nav">
+                        <div class="exp_nav_item">
+                            <a href="{{ url_for('credits') }}" class="m_nav">Kreditlər</a>
+                            <ul>
+                                <li><a href="#">İstehlak krediti</a></li>
+                                <li><a href="#">Əmanət girovu ilə kredit</a></li>
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="{{ url_for('card') }}" class="m_nav">Kartlar</a>
+                            <ul>
+                                {% for card in cards %}
+                                <li><a href="">{{card.title}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="#" class="m_nav">Əmanətlər</a>
+                            <ul>
+                                <li><a href="">Yelo Sabit</a></li>
+                                <li><a href="">Yelo Yığım</a></li>
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="#" class="m_nav">Kart xidmətləri</a>
+                            <ul>
+                                <li><a href="">Cashback</a></li>
+                                <li><a href="">PİN Reset</a></li>
+                                <li><a href="">PIN kodun dəyişdirilməsi</a></li>
+                                <li><a href="">SMS məlumatlandırma</a></li>
+                                <li><a href="">3D secure</a></li>
+                                <li><a href="">Cash by code</a></li>
+                                <li><a href="">Card to card</a></li> 
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="#" class="m_nav">Pul köcürülmələri</a>
+                            <ul>
+                                <li><a href="">Western Union</a></li>
+                                <li><a href="">Xəzri</a></li>
+                                <li><a href="">Zolotaya Korona</a></li>
+                                <li><a href="">Contact</a></li>
+                                <li><a href="">Monex</a></li>
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="#" class="m_nav">Onlayn xidmətlər</a>
+                            <ul>
+                                <li><a href="">Kredit ödənişi</a></li>
+                                <li><a href="">Ödənişlər</a></li>
+                                <li><a href="">Kredit sifarişi</a></li>
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="#" class="m_nav">Digər xidmətlər</a>
+                            <ul>
+                                <li><a href="">Hesablaşma-kassa xidməti</a></li>
+                            </ul>
+                        </div>
+                        <div class="exp_nav_item">
+                            <a href="#" class="m_nav">Cashback</a>
+                        </div>
+                    </div>
+                    <div class="contact_info">
+                        <div class="info_item">
+                            <p>Bizi tap</p>
+                            <b>Puşkin küçəsi 30, Bakı AZ 1010, Azərbaycan</b>
+                        </div>
+                        <div class="info_item">
+                            <p>Əlaqə nömrəsi</p>
+                            <b>012 981</b>
+                        </div>
+                        <div class="info_item">
+                            <p>Bizə yazın</p>
+                            <b><a href="mailto:bank@yelo.az" target="_blank">bank@yelo.az</a></b>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="menu_right" style="background-image: url(/static/assets/image/artboard_7.png);"></a>
+            </div>
+        </div>
+    </div>
+</header>

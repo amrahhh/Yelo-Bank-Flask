@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+{% block title %} Yelo Bank {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='ion.rangeSlider-master/css/ion.rangeSlider.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Main start -->
+<div class="main">
+
+    <div class="content">
+
+        <div class="slide-section">
+            <div class="slick-img">
+                <div class="da-1 main_div1">
+                    <div style="background-image: url(../static/assets/image/da-1.jpg)" class="da-1-img">
+                    </div>
+                    <div class="slick-desc">
+                        <h3>Əməkhaqqının 12 misli qədər kredit</h3>
+                        <p>Yelo Bank inanılmazı mümkün etmək üçün var!</p>
+                        <ul>
+                            <li class="order-btn"><a href="#" class="slick-desc-a-color">
+                                    <p>Sifaris et</p>
+                                </a></li>
+                            <li class="show-more-btn"><a href="#" class="slick-desc-a2-color">
+                                    <p>Daha ətraflı</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="da-1">
+                    <div class="parrent">
+                        <div style="background-image: url(../static/assets/image/1.png);" class="da-1-img">
+                        </div>
+                    </div>
+                    <div class="slick-desc">
+                        <h3>Baxışını dəyiş</h3>
+                        <p></p>
+                        <ul class="slick-ul">
+                            <li><a href="#" class="slick-desc-a-color-2">
+                                    <p>Kart</p>
+                                    <p>sifarisi</p>
+                                </a></li>
+                            <li><a href="#" class="slick-desc-a2-color-2">
+                                    <p>Daha ətraflı</p><span class="right-icon"></span>
+
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="da-1">
+                    <div style="background-image: url(../static/assets/image/yelo_az_-_7_deqiqe-aze_1.jpg);"
+                        class="da-1-img">
+                    </div>
+                    <div class="slick-desc">
+                        <h3>Krediti cəmi 7 dəqiqəyə al</h3>
+                        <p>Onlayn sifariş et, filiala gəlmə</p>
+                        <ul class="slick-ul-3">
+                            <li><a href="#" class="slick-desc-a-color-2">
+                                    <p>Sifaris et</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrap">
+        {% include 'includes/story.html' %}
+    </div>
+    <div class="main_card">
+        <div class="space" style="display: none;"></div>
+        <div class="card">
+            <div style="background-image: url(../static/assets/image/55.png);" class="card-img">
+                <!-- <img src="./static/assets/img/55.png" alt=""> -->
+            </div>
+            <div class="text">
+                <h1>Yelo light</h1>
+                <p>İstənilən ödənişlər üçün doğru seçim</p>
+                <div class="text-2">
+                    <p>Qaliqa gelir</p>
+                    <p>Cashback</p>
+                </div>
+                <div class="text-3">
+                    <p>5%</p>
+                    <p>30%-dek </p>
+                </div>
+                <div class="button-card">
+                    <button type="submit">Sifarish et</button>
+                </div>
+            </div>
+        </div>
+        <div class="kalkul">
+            <p>Kredit kalkulyator</p>
+            <div class="klas">
+                <div class="range">
+                    <p>Aylıq əmək haqqı</p>
+                    <div class="qiymet">
+                        <h2 id="salary">350</h2>
+                        <h3>AZN</h3>
+                    </div>
+                    <div class="range-kred">
+                        <input type="range" min="350" max="5000" step="100" value="2500"
+                            style="--min: 350; --max: 5000; --val:350;" class="range-k js-range-slider"
+                            id="rangeKalkul">
+                    </div>
+                </div>
+                <div class="kalkul-2">
+                    <p>Məbləğ</p>
+                    <div class="qiymet-2">
+                        <h2 id="count">300</h2>
+                        <h3>AZN</h3>
+                    </div>
+                    <div class="range-kred">
+                        <input type="range" min="300" max="20000" step="100" value="2500"
+                            style="--min: 300; --max: 20000; --val:350;" class="range-k js-range-slider"
+                            id="rangeKalkul2">
+                    </div>
+                </div>
+                <div class="kalkul-3">
+                    <p class="muddet">Müddət</p>
+                    <div class="qiymet-3">
+                        <h2 id="periodt">6</h2>
+                        <h3>AY</h3>
+                    </div>
+                    <div class="range-kred">
+                        <input type="range" min="6" max="36" step="1" value="2500"
+                            style="--min: 6; --max: 36; --val:350;" class="range-k js-range-slider" id="rangeKalkul3">
+                    </div>
+                </div>
+                <div class="yekun">
+                    <div class="qiymet-yekun">
+                        <p>Aylıq ödəniş</p>
+                        <p>İllik faiz dərəcəsi</p>
+                    </div>
+                    <div class="yekun2">
+                        <div class="qiymet-yekun2">
+                            <h3 id="total">52 AZN</h3>
+                            <h3 id="percent">17 <span>%</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="yekun-button">
+                    <button type="submit">Kredit sifarişi</button>
+                </div>
+            </div>
+        </div>
+        <div class="space" style="display:none;"></div>
+
+    </div>
+    <div class="fayda">
+        <h3>Sizin üçün faydalı</h3>
+    </div>
+    <div class="reklam_mezenne">
+        <div class="reklam">
+            <div class="phone">
+                <img src="../static/assets/image/phone.png" alt="">
+
+                <img src="../static/assets/image/Снимок экрана от 2021-01-23 23-38-20.png" class="img1001">
+            </div>
+            <div class="reklam-white">
+                <h3>YeloBank App</h3>
+                <p>Yelo-dan yeni və parlaq mobil əlavə. Hesablarını izlə, köçürmə və ödənişlərini sürətli et.
+                </p>
+                <div class="logo-mobile">
+                    <p>Yüklə</p>
+                    <div class="apple-logo">
+                        <img src="../static/assets/image/apple.svg" alt="" style="width: 16px;">
+                        <h3>App Store</h3>
+                    </div>
+                    <p>Yüklə</p>
+                    <div class="play-logo">
+                        <img src="../static/assets/image/google_play.svg" alt="" style="width: 16px;">
+                        <h3>Google Play</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="valyuta">
+            <div class="mezenne">
+                <h3>Valyuta məzənnələri</h3>
+                <div class="valyuta-azn">
+                    <input type="number" id="writeInput" class="valueChange" value="100">
+                    <select id="selectCurrency">
+                        <option selected>AZN</option>
+                        <option>USD</option>
+                        <option>EUR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="valyuta-azn2">
+                <h2 class="changeValue" id="totalValue">58.82</h2>
+                <select id="selectTag">
+                    <option id="azn">AZN</option>
+                    <option id="usd" selected>USD</option>
+                    <option id="eur">EUR</option>
+                </select>
+            </div>
+            <div class="results">
+
+                <div class="vas">
+                    <p>Valyuta</p>
+                    {% for curr in currency %}
+                    <h2>{{curr.code}}</h2>
+                    {% endfor %}
+                </div>
+                <div class="v">
+                    <p>Aliş</p>
+                    {% for curr in currency %}
+                    {% if curr.code == "USD" %}
+                    <h2 id="usdV">{{curr.value}}</h2>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% for curr in currency %}
+                    {% if curr.code == "EUR" %}
+                    <h2 id="eurV">{{curr.value}}</h2>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="a">
+                    <p>Satış</p>
+                    <h2>1.7025</h2>
+                    <h2>2.1050</h2>
+                </div>
+
+            </div>
+            <p class="child5">Region filiallarında məzənnələr fərqli ola bilər</p>
+            <div class="s">
+                <a href="#">Bütün məzənnələr</a>
+                <a href="#" style="background: url(../static/assets/image/bl_arr_bttn.svg) no-repeat;"></a>
+            </div>
+        </div>
+    </div>
+    <div class="xeberler">
+        <h3>Son xəbərlər</h3>
+        <a href="#"><span>Bütün xəbərlər</span></a>
+    </div>
+    <div class="xeber">
+        {% for new in news %}
+        <div class="news">
+            <div class="onlayn">
+                <p>{{ new.title }}</p>
+            </div>
+            <div class="etrafli">
+                <a href="#">Daha ətraflı</a>
+                <p>{{ new.created_at.now().strftime('%d %B %Y') }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- End Main selector -->
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='ion.rangeSlider-master/js/ion.rangeSlider.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

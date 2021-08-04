@@ -1,0 +1,290 @@
+/* Footer section */
+
+.footer {
+    margin: 20px 0 0 0;
+}
+
+.main_wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.foot_top {
+    border-top: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sosial {
+    display: block;
+    height: 40px;
+    padding: 0px;
+}
+
+.sosial li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+}
+
+.sosial a {
+    width: 40px;
+    height: 40px;
+    background-color: #F3F1F7;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    border-radius: 100%;
+}
+
+.app_mobile {
+    padding: 45px;
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: none;
+}
+
+.app_mobile ul {
+    width: 295px;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid #ECECEC;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 45px;
+    left: 45px;
+    background: white;
+}
+
+.app_mobile li {
+    width: 55%;
+}
+
+.app_mobile li a {
+    display: block;
+    padding: 0 13px;
+    white-space: nowrap;
+}
+
+.apple div {
+    background: url(../assets/image/apple.svg) no-repeat left 11px;
+    display: block;
+    padding: 6px 0 6px 34px;
+}
+
+.app_mobile span {
+    opacity: 0.5;
+    font-size: 12px;
+    color: #505050;
+}
+
+.app_mobile li p {
+    opacity: 0.5;
+    font-family: 'm';
+    font-size: 19px;
+    color: #505050;
+    letter-spacing: -0.4px;
+    line-height: 9px;
+}
+
+.app_mobile ul:after {
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background: #ECECEC;
+    display: block;
+    content: '';
+    left: 48%;
+    top: 50%;
+    margin: -15px 0 0 -0.5px;
+}
+
+.google_play div {
+    background: url(../assets/image/google_play.svg) no-repeat left 13px;
+    display: block;
+    padding: 6px 0 6px 34px;
+}
+
+.contact_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot_top .contact_info {
+    width: 50%;
+}
+
+.info_item {
+    width: 33.333%;
+}
+
+.foot_top .contact_info .info_item {
+    width: auto;
+}
+
+.info_item p {
+    color: rgba(0,0,0,0.5);
+}
+
+.info_item b {
+    color: #000000;
+    font-family: 'm';
+}
+
+.info_item b a {
+    color: black;
+}
+
+.foot_bottom {
+    padding: 30px 0 40px;
+    text-align: center;
+}
+
+.foot_bottom .logo {
+    display: inline-block;
+    margin: 0 0 10px 0;
+}
+
+.foot_bottom ul {
+    width: 100%;
+}
+
+.foot_bottom li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.foot_bottom li p {
+    color: rgba(0,0,0,0.5);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.foot_bottom li a {
+    color: rgba(0,0,0,0.5);
+    text-decoration: underline;
+}
+
+.foot_bottom li a:hover {
+    text-decoration: none;
+}
+
+.by_tanius {
+    margin: 10px 0 0 0;
+    color: rgba(0,0,0,0.5);
+}
+.by_tanius p{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tanius {
+    background: url(../assets/image/jis.svg) no-repeat 0px 3px;
+    background-size: 16px;
+    padding: 0 0 0 22px;
+    display: inline-block;
+    margin: 0 0 0 9px;
+    vertical-align: middle;
+    color: rgba(0,0,0,0.5);
+    text-decoration: underline;
+}
+
+/* Finish Footer section */
+
+@media screen and (max-width:1000px) {
+    footer {
+        margin: 20px 0 0 0;
+    }
+
+    .main_wrap {
+        padding: 0 15px;
+    }
+
+    .foot_top {
+        display: block;
+    }
+
+    .sosial {
+        width: 100%;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .sosial li {
+        margin: 0 4px;
+    }
+
+    .app_mobile {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .app_mobile ul {
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: auto;
+        margin: 10px 0 0 0;
+    }
+
+    .app_mobile li a {
+        display: block;
+        padding: 4px 13px;
+        white-space: nowrap;
+        text-align: center;
+        height: 100%;
+    }
+
+    .apple div {
+        background: url(../assets/image/apple.svg) no-repeat left 9px;
+        display: inline-block;
+        padding: 0 0 0 24px;
+        background-size: 15px;
+        text-align: left;
+    }
+
+    .app_mobile span {
+        font-size: 11px;
+    }
+
+    .google_play div {
+        background: url(../assets/image/google_play.svg) no-repeat left 10px;
+        display: inline-block;
+        padding: 0 0 0 24px;
+        background-size: 15px;
+        text-align: left;
+    }
+
+    .foot_top .contact_info {
+        width: 100%;
+        padding: 20px 0 0 0;
+        text-align: center;
+    }
+
+    .info_item:first-child {
+        display: none;
+    }
+
+    .foot_top .contact_info .info_item {
+        width: 50%;
+    }
+
+    .info_item p {
+        line-height: 19px;
+    }
+
+    .foot_bottom .logo {
+        width: 150px;
+    }
+
+    .foot_bottom ul {
+        font-size: 14px;
+    }
+}

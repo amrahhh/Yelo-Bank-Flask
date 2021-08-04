@@ -1,0 +1,23 @@
+<div class="block stories">
+    <div class="block_title">
+        <div class="block_heading">
+            <b>Storilər</b>
+            <span class="counter">3</span>
+        </div>
+        <div class="block_content">
+            <div class="slick">
+                {% for stor in story %}
+                <div class="slick_items" style="background-color: {{stor.color}};">
+                    <div class="story_desc">
+                        <span class="tag" style="color: {{stor.color}}">{{stor.tip}}</span>
+                        <b>{{stor.description}}</b>
+                    </div>
+                    <div class="story_image">
+                        <img src="{{stor.image}}" style="background-color: {{stor.color}};" alt="">
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %} Kartlar | Yelo Bank {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/card.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Content Page -->
+
+<div class="content_page main">
+    <div class="main_content">
+        <div class="content_title">
+            <h1>Kartlar</h1>
+            <p>İstənilən yerdə istifadəsinin rahatlığı və üstünlükləri ilə Yelo Bank kartları hər kəsin ürəyincə
+                olacaq</p>
+        </div>
+        <div class="content_list" data-tabs-content="filter_cards">
+
+            {% for card in cards %}
+            <div class="content_item yelo_bg">
+                <div class="desc">
+                    <div class="desc_b">{{card.title}}</div>
+                    <div class="desc_p">{{card.description}}</div>
+                    <div class="desc_spec">
+                        <div class="desc_spec_items">
+                            <p>Müddət</p>
+                            <b>{{card.term}}</b>
+                        </div>
+                        <div class="desc_spec_items">
+                            <p>Valyuta</p>
+                            <b>{{card.currency}}</b>
+                        </div>
+                        <div class="desc_spec_items">
+                            <p>Cashback</p>
+                            <b>{{card.cashback}}</b>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#" class="btnBasket"><span>Sifariş et</span></a></li>
+                        <li><a href="#" class="bl_arr_bttn"><span>Daha ətraflı</span></a></li>
+                    </ul>
+                </div>
+                <div class="image">
+                    <div class="card_atv atvImg">
+                        <img src="{{card.image}}" class="imgRotate" alt="">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% include 'includes/story.html' %}
+</div>
+<!-- Finish Content -->
+
+{% endblock %}
+
+    {% block js %}
+    <script src="{{ url_for('static', filename='js/card.js') }}"></script>
+    {% endblock %}
+
+</html>
